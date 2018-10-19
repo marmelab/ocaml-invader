@@ -1,0 +1,12 @@
+name: ocaml-invader
+version: 0.0.1
+description: Simple OCaml Invader Game
+licence: MIT
+authors: Julien Demangeon <julien@marmelab.com>
+obuild-ver: 1
+homepage: http://github.com/marmelab/ocaml-invader
+
+executable ocaml-invader
+    main-is: main.ml
+    src-dir: src
+    buildDepends: lablgl, lablgl.glut
