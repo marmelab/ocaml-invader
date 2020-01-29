@@ -1,6 +1,6 @@
 let specialKeyToAction ~key ~x ~y =
   match key with
-  | 27 -> exit 0; None
+  | 27 -> exit 0;
   | 32 -> Some Game.Shoot
   | _ -> None
 

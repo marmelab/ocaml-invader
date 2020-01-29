@@ -1,10 +1,10 @@
-FROM ocaml/opam:debian-10_ocaml-4.05.0_flambda
+FROM ocaml/opam2:debian-10-ocaml-4.08
 
 RUN sudo mkdir /app
 WORKDIR /app
 ADD . /app/
 
 RUN sudo apt-get update
+RUN sudo apt-get install m4 freeglut3-dev libglu1-mesa-dev mesa-common-dev -y
 
-RUN opam install obuild core
-RUN opam depext lablgl
+RUN opam install lablgl obuild core

@@ -128,7 +128,6 @@ let controller game = function
         let bullets = List.map Bullet.advance game.bullets in
             game.bullets <- List.filter (Bullet.isInBoundsBullet ~bounds: (50., 50., 400., 600.)) bullets;
         game
-    | _ -> game
 
 let renderHome game =
     GlClear.clear [ `color ];
